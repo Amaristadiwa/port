@@ -618,3 +618,7 @@ section {
     display: block;
 }
 
+.horizontal {
+  display: flex;
+  gap: 20px; /* space between items */
+}
