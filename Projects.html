@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Tadiwa Mangate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Tadiwa<span>Mangate</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About me.html">About</a></li>
+                    <li><a href="Projects.html" class="active">Projects</a></li>
+                    <li><a href="Contact me.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">My <span>Projects</span></h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="app">Web App</button>
+                <button class="filter-btn" data-filter="react">React</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <img src="images/Capture.PNG" alt="Project 1" style="width: 300px; height: 200px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;" onclick="expandImage(this)">
+
+                    <!-- Modal for expanded image -->
+                    <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+                        <span onclick="closeModal()" style="position:absolute;top:30px;right:50px;font-size:40px;color:#fff;cursor:pointer;">&times;</span>
+                        <img id="modalImg" src="" alt="Expanded Project" style="max-width:90vw; max-height:80vh; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.3);">
+                    </div>
+                    <script>
+                    function expandImage(img) {
+                        var modal = document.getElementById('imgModal');
+                        var modalImg = document.getElementById('modalImg');
+                        modal.style.display = 'flex';
+                        modalImg.src = img.src;
+                    }
+                    function closeModal() {
+                        document.getElementById('imgModal').style.display = 'none';
+                    }
+                    </script>
+                    <div class="portfolio-overlay">
+                        <h3 style="font-size: 1.4rem; color: #ff69b4; margin-bottom: 8px; letter-spacing: 1px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <i class="fas fa-gem" style="color:#fff176; margin-right:8px;"></i>
+                            Elegant Website
+                        </h3>
+                        <p>HTML, CSS, JavaScript</p>
+                        <a href="https://my-bakery-e9ik.vercel.app/" class="portfolio-link" style="display:inline-block; background:#ff69b4; color:#fff; padding:10px 18px; border-radius:8px; font-weight:600; box-shadow:0 2px 8px rgba(0,0,0,0.12); transition:background 0.2s;">
+                            <i class="fas fa-external-link-alt" style="margin-right:6px;"></i>
+                            Visit Site
+                        </a>
+                        
+                </div>
+               <div class="portfolio-item" data-category="web">
+                    <img src="images\2.PNG" alt="Project 2" style="width: 300px; height: 200px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;" onclick="expandImage(this)">
+
+                    <!-- Modal for expanded image -->
+                    <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+                        <span onclick="closeModal()" style="position:absolute;top:30px;right:50px;font-size:40px;color:#fff;cursor:pointer;">&times;</span>
+                        <img id="modalImg" src="" alt="Expanded Project" style="max-width:90vw; max-height:80vh; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.3);">
+                    </div>
+                    <script>
+                    function expandImage(img) {
+                        var modal = document.getElementById('imgModal');
+                        var modalImg = document.getElementById('modalImg');
+                        modal.style.display = 'flex';
+                        modalImg.src = img.src;
+                    }
+                    function closeModal() {
+                        document.getElementById('imgModal').style.display = 'none';
+                    }
+                    </script>
+                    <div class="portfolio-overlay">
+                        <h3 style="font-size: 1.4rem; color: #ff69b4; margin-bottom: 8px; letter-spacing: 1px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <i class="fas fa-gem" style="color:#fff176; margin-right:8px;"></i>
+                            Web Application
+                        </h3>
+                        <p>React,Tailwind.css</p>
+                        <a href="https://my-bakery-nu8s.vercel.app//" class="portfolio-link" style="display:inline-block; background:#ff69b4; color:#fff; padding:10px 18px; border-radius:8px; font-weight:600; box-shadow:0 2px 8px rgba(0,0,0,0.12); transition:background 0.2s;">
+                            <i class="fas fa-external-link-alt" style="margin-right:6px;"></i>
+                            Visit Site
+                        </a>
+                        
+               </div>
+               <div class="portfolio-item" data-category="web">
+                    <img src="images\3.PNG" alt="Project 3" style="width: 300px; height: 200px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;" onclick="expandImage(this)">
+
+                    <!-- Modal for expanded image -->
+                    <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+                        <span onclick="closeModal()" style="position:absolute;top:30px;right:50px;font-size:40px;color:#fff;cursor:pointer;">&times;</span>
+                        <img id="modalImg" src="" alt="Expanded Project" style="max-width:90vw; max-height:80vh; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.3);">
+                    </div>
+                    <script>
+                    function expandImage(img) {
+                        var modal = document.getElementById('imgModal');
+                        var modalImg = document.getElementById('modalImg');
+                        modal.style.display = 'flex';
+                        modalImg.src = img.src;
+                    }
+                    function closeModal() {
+                        document.getElementById('imgModal').style.display = 'none';
+                    }
+                    </script>
+                    <div class="portfolio-overlay">
+                        <h3 style="font-size: 1.4rem; color: #ff69b4; margin-bottom: 8px; letter-spacing: 1px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <i class="fas fa-gem" style="color:#fff176; margin-right:8px;"></i>
+                            travel card
+                        </h3>
+                        <p>HTML, CSS, JavaScript</p>
+                        <a href="https://react-bar-plum.vercel.app/" class="portfolio-link" style="display:inline-block; background:#ff69b4; color:#fff; padding:10px 18px; border-radius:8px; font-weight:600; box-shadow:0 2px 8px rgba(0,0,0,0.12); transition:background 0.2s;">
+                            <i class="fas fa-external-link-alt" style="margin-right:6px;"></i>
+                            Visit Site
+                        </a>
+                        
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">Your<span>Name</span></a>
+                    <p>Creating beautiful digital experiences with code.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About me.html">About</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contact me.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Get In Touch</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> tadiwamangate9@example.com</li>
+                        <li><i class="fas fa-phone"></i> +263 470 0857</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tadiwa Mangate. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
